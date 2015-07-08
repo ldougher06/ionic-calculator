@@ -7,6 +7,7 @@
 
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
@@ -20,14 +21,57 @@
 
     <!-- your app's js -->
     <script src="js/app.js"></script>
+    <script src="js/mainCtrl.js"></script>
   </head>
-  <body ng-app="starter">
+  <body ng-app="starter" ng-controller="mainCtrl">
 
     <ion-pane>
       <ion-header-bar class="bar-stable">
         <h1 class="title">Ionic Blank Starter</h1>
       </ion-header-bar>
       <ion-content>
+        <div class="fluid-container">
+          <div class="display">{{display}}</div>
+          <div class="row">
+            <button type="operationBtn" class="button button-balanced col" ng-click=''>x<sup>2</sup></button>
+            <button type="operationBtn" class="button button-calm col" ng-click=''>sin</button>
+            <button type="operationBtn" class="button button-calm col" ng-click=''>cos</button>
+            <button type="operationBtn" class="button button-calm col" ng-click=''>tan</button>
+          </div>
+          <div class="row">
+            <button type="operationBtn" class="button button-balanced col" ng-click=''>√</button>
+            <button type="operationBtn" class="button button-calm col" ng-click=''>sin<sup>-1</sup></button>
+            <button type="operationBtn" class="button button-calm col" ng-click=''>cos<sup>-1</sup></button>
+            <button type="operationBtn" class="button button-calm col" ng-click=''>tan<sup>-1</sup></button>
+          </div>
+          <div class="row">
+            <button type="numBtn" class="button button-dark col" value="1" ng-click='displayUpdate(1)'>1</button>
+            <button type="numBtn" class="button button-dark col" value="2" ng-click='displayUpdate(2)'>2</button>
+            <button type="numBtn" class="button button-dark col" value="3" ng-click='displayUpdate(3)'>3</button>
+            <button type="operationBtn" class="button button-royal col" ng-click="">%</button>
+          </div>
+          <div class="row">
+            <button type="numBtn" class="button button-dark col" value="4" ng-click='displayUpdate(4)'>4</button>
+            <button type="numBtn" class="button button-dark col" value="5" ng-click='displayUpdate(5)'>5</button>
+            <button type="numBtn" class="button button-dark col" value="6" ng-click='displayUpdate(6)'>6</button>
+            <button type="operationBtn" class="button button-royal col" ng-click=''>x</button>
+          </div>
+          <div class="row">
+            <button type="numBtn" class="button button-dark col" value="7" ng-click='displayUpdate(7)'>7</button>
+            <button type="numBtn" class="button button-dark col" value="8" ng-click='displayUpdate(8)'>8</button>
+            <button type="numBtn" class="button button-dark col" value="9" ng-click='displayUpdate(9)'>9</button>
+            <button type="operationBtn" class="button button-royal col" ng-click='displayUpdate'>+</button>
+          </div>
+          <div class="row">
+            <button type="numBtn" class="button button-dark col col-50" value="0" ng-click='displayUpdate(0)'>0</button>
+            <button type="decimalBtn" class="button button-energized col" ng-click=''>.</button>
+            <button type="operationBtn" class="button button-royal col" ng-click=''>-</button>
+          </div>
+          <div class="row">
+            <button type="clearBtn" class="button button-assertive col col-50" ng-click=''>clear</button>
+            <button type="equalBtn" class="button button-energized col col-50" ng-click=''>=</button>
+          </div>
+        </div>
       </ion-content>
     </ion-pane>
   </body>
