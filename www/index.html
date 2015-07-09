@@ -33,49 +33,44 @@
         <div class="fluid-container">
           <div class="display">{{display}}</div>
           <div class="row">
-            <button type="operationBtn" class="button button-balanced col" ng-click='operationBtn(x2)'>x<sup>2</sup></button>
-            <button type="operationBtn" class="button button-calm col" ng-click='operationBtn()'>sin</button>
-            <button type="operationBtn" class="button button-calm col" ng-click='operationBtn()'>cos</button>
-            <button type="operationBtn" class="button button-calm col" ng-click='operationBtn()'>tan</button>
+            <button type="" class="button button-balanced col" ng-click='(x2)'>x<sup>2</sup></button>
+            <button type="" class="button button-calm col">sin</button>
+            <button type="" class="button button-calm col">cos</button>
+            <button type="" class="button button-calm col">tan</button>
           </div>
           <div class="row">
-            <button type="operationBtn" class="button button-balanced col" ng-click=''>√</button>
-            <button type="operationBtn" class="button button-calm col" ng-click='operationBtn()'>sin<sup>-1</sup></button>
-            <button type="operationBtn" class="button button-calm col" ng-click='operationBtn()'>cos<sup>-1</sup></button>
-            <button type="operationBtn" class="button button-calm col" ng-click='operationBtn()'>tan<sup>-1</sup></button>
+            <button type="" class="button button-balanced col" ng-click=''>√</button>
+            <button type="" class="button button-calm col">sin<sup>-1</sup></button>
+            <button type="" class="button button-calm col">cos<sup>-1</sup></button>
+            <button type="" class="button button-calm col">tan<sup>-1</sup></button>
           </div>
           <div class="row">
-            <button type="numBtn" class="button button-dark col" value="1" ng-click='displayUpdate(1)'>1</button>
-            <button type="numBtn" class="button button-dark col" value="2" ng-click='displayUpdate(2)'>2</button>
-            <button type="numBtn" class="button button-dark col" value="3" ng-click='displayUpdate(3)'>3</button>
-            <button type="operationBtn" class="button button-royal col" ng-click="operationBtn()">%</button>
+            <button type="numBtn" class="button button-dark col" value="1" ng-click='updateDisplay(1)'>1</button>
+            <button type="numBtn" class="button button-dark col" value="2" ng-click='updateDisplay(2)'>2</button>
+            <button type="numBtn" class="button button-dark col" value="3" ng-click='updateDisplay(3)'>3</button>
+            <button type="" class="button button-royal col">%</button>
           </div>
           <div class="row">
-            <button type="numBtn" class="button button-dark col" value="4" ng-click='displayUpdate(4)'>4</button>
-            <button type="numBtn" class="button button-dark col" value="5" ng-click='displayUpdate(5)'>5</button>
-            <button type="numBtn" class="button button-dark col" value="6" ng-click='displayUpdate(6)'>6</button>
-            <button type="operationBtn" class="button button-royal col" ng-click='operationBtn()'>x</button>
+            <button type="numBtn" class="button button-dark col" value="4" ng-click='updateDisplay(4)'>4</button>
+            <button type="numBtn" class="button button-dark col" value="5" ng-click='updateDisplay(5)'>5</button>
+            <button type="numBtn" class="button button-dark col" value="6" ng-click='updateDisplay(6)'>6</button>
+            <button type="" class="button button-royal col">x</button>
           </div>
           <div class="row">
-            <button type="numBtn" class="button button-dark col" value="7" ng-click='displayUpdate(7)'>7</button>
-            <button type="numBtn" class="button button-dark col" value="8" ng-click='displayUpdate(8)'>8</button>
-            <button type="numBtn" class="button button-dark col" value="9" ng-click='displayUpdate(9)'>9</button>
-            <button type="operationBtn" class="button button-royal col" ng-click='operationBtn()'>+</button>
+            <button type="numBtn" class="button button-dark col" value="7" ng-click='updateDisplay(7)'>7</button>
+            <button type="numBtn" class="button button-dark col" value="8" ng-click='updateDisplay(8)'>8</button>
+            <button type="numBtn" class="button button-dark col" value="9" ng-click='updateDisplay(9)'>9</button>
+            <button type="" class="button button-royal col" ng-click='add()'>+</button>
           </div>
           <div class="row">
-            <button type="numBtn" class="button button-dark col col-50" value="0" ng-click='displayUpdate(0)'>0</button>
-            <button type="numBtn" class="button button-energized col" ng-click='displayUpdate()'>.</button>
-            <button type="operationBtn" class="button button-royal col" ng-click='operationBtn()'>-</button>
+            <button type="numBtn" class="button button-dark col col-50" value="0" ng-click='updateDisplay(0)'>0</button>
+            <button type="numBtn" class="button button-energized col">.</button>
+            <button type="" class="button button-royal col" ng-click='subtract()'>-</button>
           </div>
           <div class="row">
-            <button type="clearBtn" class="button button-assertive col col-50" ng-click='clearBtn()'>clear</button>
-            <button type="equalBtn" class="button button-energized col col-50" ng-click='equalBtn()'>=</button>
+            <button type="clearBtn" class="button button-assertive col col-50" ng-click='clear()'>clear</button>
+            <button type="equalBtn" class="button button-energized col col-50" ng-click='calculate()'>=</button>
           </div>
-          <div class="pendingOperation">Pending Operation:{{pendingOperation}}</div>
-          <div class="runningTotal">Running Total:{{runningTotal}}</div>
-          <div class="pendingValue">Pending Value:{{pendingValue}}</div>
-          <div class="lastOperation">Last Operation:{{lastOperation}}</div>
-          <div class-"operationBtn">Operation Button:{{operationBtn}}</div>
         </div>
       </ion-content>
     </ion-pane>
